@@ -3,5 +3,6 @@ export default {
   output: {
     format: 'cjs',
     file: 'dist/plugin.js',
+    sourcemap: true,
   },
 }

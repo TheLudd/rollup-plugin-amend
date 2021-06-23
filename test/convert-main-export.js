@@ -114,4 +114,32 @@ describe('convertMainExport', () => {
     `import foo from 'foo'
     export default foo + 1`,
   )
+
+  createTest(
+    'cjs exporting string',
+    "module.exports = 'A string'",
+    "export default 'A string'",
+  )
+
+  createTest(
+    'non factory using cjs',
+    `
+    module.exports = {
+      foo () {
+        return 'foo'
+      },
+      bar () {
+        return 'bar'
+      },
+    }`,
+    `
+    export default {
+      foo () {
+        return 'foo'
+      },
+      bar () {
+        return 'bar'
+      },
+    }`,
+  )
 })

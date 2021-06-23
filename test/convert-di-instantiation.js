@@ -2,7 +2,11 @@ import convertDIInstantiation from '../lib/convert-di-instantiation'
 import createConvertTest from './create-convert-test'
 
 describe('convertDIInstantiation', () => {
-  const createTest = createConvertTest(convertDIInstantiation)
+  const fakeModules = {
+    dep1: 'full-path-dependency-1',
+    dep2: 'full-path-dependency-2',
+  }
+  const createTest = createConvertTest((program) => convertDIInstantiation(fakeModules, program))
 
   createTest(
     'only initialization',
@@ -53,5 +57,20 @@ const dep1 = di.get('dep1Name')
 
     const { m } = dep1
     `,
+  )
+
+  createTest(
+    'loadAll',
+    `
+    const { fromNodeConfig } = require('amend')
+    const di = fromNodeConfig({
+      config,
+      baseDir: __amendBaseDir,
+      annotations: amendAnnotation,
+    })
+    di.loadAll()
+    `,
+    `import 'full-path-dependency-1'
+    import 'full-path-dependency-2'`,
   )
 })
