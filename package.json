@@ -3,11 +3,12 @@
   "version": "1.0.1",
   "license": "MIT",
   "author": "Ludwig Magnusson <ludwig.magnusson@gmail.com>",
-  "main": "./dist/plugin.js",
+  "main": "./lib/plugin.mjs",
+  "type": "module",
   "exports": {
     ".": {
       "import": "./lib/plugin.mjs",
-      "require": "./dist/plugin.js"
+      "require": "./dist/plugin.cjs"
     }
   },
   "scripts": {

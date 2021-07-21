@@ -2,7 +2,7 @@ export default {
   input: 'lib/plugin.mjs',
   output: {
     format: 'cjs',
-    file: 'dist/plugin.js',
+    file: 'dist/plugin.cjs',
     sourcemap: true,
   },
 }
