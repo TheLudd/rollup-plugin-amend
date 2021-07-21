@@ -3,7 +3,6 @@
   "version": "1.0.2",
   "license": "MIT",
   "author": "Ludwig Magnusson <ludwig.magnusson@gmail.com>",
-  "main": "./lib/plugin.mjs",
   "type": "module",
   "exports": {
     ".": {
@@ -11,18 +10,14 @@
       "require": "./dist/plugin.cjs"
     }
   },
+  "main": "./lib/plugin.mjs",
+  "files": [
+    "lib",
+    "dist"
+  ],
   "scripts": {
     "lint": "eslint lib test *.js",
     "test": "mocha"
-  },
-  "devDependencies": {
-    "@yafu/eslint-config-yafu": "^1.0.2",
-    "chai": "^4.2.0",
-    "eslint": "^7.16.0",
-    "fs-extra": "^9.0.1",
-    "mocha": "^9.0.2",
-    "rollup": "^2.35.1",
-    "source-map-support": "^0.5.19"
   },
   "dependencies": {
     "@babel/core": "^7.12.10",
@@ -36,5 +31,14 @@
     "ramda": "^0.27.1",
     "recast": "^0.20.4",
     "yafu": "^1.0.4"
+  },
+  "devDependencies": {
+    "@yafu/eslint-config-yafu": "^1.0.2",
+    "chai": "^4.2.0",
+    "eslint": "^7.16.0",
+    "fs-extra": "^9.0.1",
+    "mocha": "^9.0.2",
+    "rollup": "^2.35.1",
+    "source-map-support": "^0.5.19"
   }
 }
