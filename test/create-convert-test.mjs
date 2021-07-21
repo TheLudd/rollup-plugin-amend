@@ -1,11 +1,11 @@
-import { assert } from 'chai'
+import chai from 'chai'
 import { curry } from 'yafu'
 import { parse, print } from 'recast'
 import { compose, replace, trim } from 'ramda'
 
-const parser = require('acorn')
+import * as parser from 'acorn'
 
-const { equal } = assert
+const { equal } = chai.assert
 
 const outdent = replace(/^ {4}/mg, '')
 const clean = compose(

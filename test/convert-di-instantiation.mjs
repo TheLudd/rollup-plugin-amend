@@ -1,5 +1,5 @@
-import convertDIInstantiation from '../lib/convert-di-instantiation'
-import createConvertTest from './create-convert-test'
+import convertDIInstantiation from '../lib/convert-di-instantiation.mjs'
+import createConvertTest from './create-convert-test.mjs'
 
 describe('convertDIInstantiation', () => {
   const fakeModules = {

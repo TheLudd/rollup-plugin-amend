@@ -1,5 +1,5 @@
-import convertMainExport from '../lib/convert-main-export'
-import createConvertTest from './create-convert-test'
+import convertMainExport from '../lib/convert-main-export.mjs'
+import createConvertTest from './create-convert-test.mjs'
 
 describe('convertMainExport', () => {
   const createTest = createConvertTest(convertMainExport)

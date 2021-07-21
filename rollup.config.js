@@ -1,5 +1,5 @@
 export default {
-  input: 'lib/plugin.js',
+  input: 'lib/plugin.mjs',
   output: {
     format: 'cjs',
     file: 'dist/plugin.js',
