@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-amend",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "author": "Ludwig Magnusson <ludwig.magnusson@gmail.com>",
   "main": "./lib/plugin.mjs",
