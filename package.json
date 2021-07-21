@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-amend",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "author": "Ludwig Magnusson <ludwig.magnusson@gmail.com>",
   "type": "module",
